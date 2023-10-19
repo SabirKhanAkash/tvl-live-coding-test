@@ -1,7 +1,7 @@
 # tvl-live-coding-test
 Live Coding Test for Android Developer from Techetron Ventures Ltd. (TVL)
 
-- Technologies Used: Kotlin, XML, Groovy, Handler
+- Technologies Used: Kotlin, XML, Groovy, Handler, Runnable
 - Feature Used: ViewBinding
 - IDE Used: Android Studio
 - Emulator Used: Google Pixel 7 Pro
