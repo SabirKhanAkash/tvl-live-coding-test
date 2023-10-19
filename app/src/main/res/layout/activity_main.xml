@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".view.activity.MainActivity">
 
@@ -13,27 +13,27 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/detailsView"
-            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120sp"
-            android:layout_marginBottom="15sp"
             android:layout_marginStart="12sp"
-            android:layout_marginEnd="12sp">
+            android:layout_marginTop="120sp"
+            android:layout_marginEnd="12sp"
+            android:layout_marginBottom="15sp"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="15sp">
+                android:layout_margin="15sp"
+                android:orientation="vertical">
 
                 <TextView
-                    android:textSize="12sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The Company has informed that they will organize a conference on its 3rd quarter 2023 Financial results on October 25, 2023 at 10:00 AM via live webcast facility with the web link of https://meetbd.live/GPQ32023."
                     android:fontFamily="@font/inter"
-                    android:textColor="@color/black"/>
+                    android:text="The Company has informed that they will organize a conference on its 3rd quarter 2023 Financial results on October 25, 2023 at 10:00 AM via live webcast facility with the web link of https://meetbd.live/GPQ32023."
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -43,57 +43,72 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:weightSum="1"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:weightSum="1">
 
             <LinearLayout
-                android:backgroundTint="#CFCFCF"
-                android:orientation="vertical"
-                android:layout_weight="0.9"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:backgroundTint="#CFCFCF"
+                android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
-                    app:cardElevation="5sp"
-                    app:cardCornerRadius="8sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18sp"
-                    android:layout_marginBottom="15sp"
                     android:layout_marginStart="12sp"
-                    android:layout_marginEnd="12sp">
+                    android:layout_marginTop="18sp"
+                    android:layout_marginEnd="12sp"
+                    android:layout_marginBottom="15sp"
+                    app:cardCornerRadius="8sp"
+                    app:cardElevation="5sp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_margin="15sp">
+                        android:layout_margin="15sp"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:textSize="12sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
                             android:text="GP.PB"
-                            android:fontFamily="@font/inter"
-                            android:textColor="@color/black"/>
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
 
                         <TextView
-                            android:textSize="12sp"
-                            android:fontFamily="@font/inter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
                             android:text="Grammenphone Limited"
-                            android:textColor="@color/black"/>
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
 
-                        <TextView
-                            android:id="@+id/amount"
-                            android:textSize="12sp"
-                            android:fontFamily="@font/inter"
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="৳ 100.00"
-                            android:textColor="@color/black"/>
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="৳ "
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="0.0"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -101,133 +116,166 @@
 
                 <LinearLayout
                     android:id="@+id/content"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="13sp"
+                        android:text="People also own"
+                        android:textColor="@color/black"
                         android:textSize="22sp"
-                        android:layout_marginStart="13sp"
-                        android:layout_marginEnd="13sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:text="People also own"/>
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:layout_marginTop="12sp"
-                        android:textSize="13sp"
-                        android:layout_marginStart="13sp"
-                        android:layout_marginEnd="13sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginTop="12sp"
+                        android:layout_marginEnd="13sp"
+                        android:text="This list is based on the portfolio of people on StockX who own ACI."
                         android:textColor="@color/black"
-                        android:text="This list is based on the portfolio of people on StockX who own ACI."/>
+                        android:textSize="13sp" />
 
                     <GridLayout
-                        android:orientation="horizontal"
-                        android:layout_margin="12sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:rowCount="1"
-                        android:columnCount="2">
+                        android:layout_margin="12sp"
+                        android:columnCount="2"
+                        android:orientation="horizontal"
+                        android:rowCount="1">
 
                         <androidx.cardview.widget.CardView
-                            app:cardElevation="10sp"
-                            app:cardCornerRadius="10sp"
-                            android:layout_columnWeight="0.5"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="18sp"
-                            android:layout_marginBottom="15sp"
+                            android:layout_columnWeight="0.5"
                             android:layout_marginStart="12sp"
-                            android:layout_marginEnd="12sp">
+                            android:layout_marginTop="18sp"
+                            android:layout_marginEnd="12sp"
+                            android:layout_marginBottom="15sp"
+                            app:cardCornerRadius="10sp"
+                            app:cardElevation="10sp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_margin="15sp">
+                                android:layout_margin="15sp"
+                                android:orientation="vertical">
 
                                 <TextView
-                                    android:textStyle="bold"
-                                    android:textSize="18sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:fontFamily="@font/inter"
                                     android:text="GP.PB"
-                                    android:fontFamily="@font/inter"
-                                    android:textColor="#090909"/>
+                                    android:textColor="#090909"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
-                                <TextView
-                                    android:id="@+id/amount_2"
-                                    android:layout_marginTop="25sp"
-                                    android:textSize="13sp"
-                                    android:fontFamily="@font/inter"
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="GP.PB ৳ 100.00"
-                                    android:textColor="@color/black"/>
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="25sp"
+                                        android:fontFamily="@font/inter"
+                                        android:text="GP.PB ৳ "
+                                        android:textColor="@color/black"
+                                        android:textSize="13sp" />
+
+                                    <TextView
+                                        android:id="@+id/amount_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="25sp"
+                                        android:fontFamily="@font/inter"
+                                        android:text="0.0"
+                                        android:textColor="@color/black"
+                                        android:textSize="13sp" />
+
+                                </LinearLayout>
+
 
                                 <TextView
                                     android:id="@+id/percent"
-                                    android:textSize="22sp"
-                                    android:textStyle="bold"
-                                    android:fontFamily="@font/inter"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="+9.40%"
-                                    android:textColor="#00C806"/>
+                                    android:fontFamily="@font/inter"
+                                    android:text="+0.00%"
+                                    android:textColor="#00C806"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
 
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            app:cardElevation="10sp"
-                            app:cardCornerRadius="10sp"
-                            android:layout_columnWeight="0.5"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="18sp"
-                            android:layout_marginBottom="15sp"
+                            android:layout_columnWeight="0.5"
                             android:layout_marginStart="12sp"
-                            android:layout_marginEnd="12sp">
+                            android:layout_marginTop="18sp"
+                            android:layout_marginEnd="12sp"
+                            android:layout_marginBottom="15sp"
+                            app:cardCornerRadius="10sp"
+                            app:cardElevation="10sp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_margin="15sp">
+                                android:layout_margin="15sp"
+                                android:orientation="vertical">
 
                                 <TextView
-                                    android:textStyle="bold"
-                                    android:textSize="18sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:fontFamily="@font/inter"
                                     android:text="GP.PB"
-                                    android:fontFamily="@font/inter"
-                                    android:textColor="#090909"/>
+                                    android:textColor="#090909"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
-                                <TextView
-                                    android:id="@+id/amount_3"
-                                    android:layout_marginTop="25sp"
-                                    android:textSize="13sp"
-                                    android:fontFamily="@font/inter"
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="GP.PB ৳ 100.00"
-                                    android:textColor="@color/black"/>
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="25sp"
+                                        android:fontFamily="@font/inter"
+                                        android:text="GP.PB ৳ "
+                                        android:textColor="@color/black"
+                                        android:textSize="13sp" />
+
+                                    <TextView
+                                        android:id="@+id/amount_3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="25sp"
+                                        android:fontFamily="@font/inter"
+                                        android:text="0.0"
+                                        android:textColor="@color/black"
+                                        android:textSize="13sp" />
+
+                                </LinearLayout>
 
                                 <TextView
                                     android:id="@+id/percent_2"
-                                    android:textSize="22sp"
-                                    android:textStyle="bold"
-                                    android:fontFamily="@font/inter"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="+9.40%"
-                                    android:textColor="#00C806"/>
+                                    android:fontFamily="@font/inter"
+                                    android:text="+0.00%"
+                                    android:textColor="#00C806"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
 
                             </LinearLayout>
 
@@ -239,71 +287,70 @@
                 </LinearLayout>
 
 
-
             </LinearLayout>
 
             <LinearLayout
-                android:elevation="5sp"
-                android:background="@color/white"
-                android:layout_weight="0.1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:background="@color/white"
+                android:elevation="5sp">
 
                 <LinearLayout
-                    android:layout_gravity="center"
-                    android:weightSum="1"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <LinearLayout
                         android:id="@+id/homeBtn"
-                        android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5">
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:id="@+id/homeIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_colored_icon"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            android:background="@drawable/home_colored_icon" />
 
                         <TextView
                             android:id="@+id/homeText"
-                            android:fontFamily="@font/inter"
-                            android:textColor="#00C806"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Home"/>
+                            android:fontFamily="@font/inter"
+                            android:text="Home"
+                            android:textColor="#00C806" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/detailsBtn"
-                        android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5">
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:id="@+id/detailsIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/details_icon"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            android:background="@drawable/details_icon" />
 
                         <TextView
                             android:id="@+id/detailsText"
-                            android:fontFamily="@font/inter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Details"/>
+                            android:fontFamily="@font/inter"
+                            android:text="Details" />
 
                     </LinearLayout>
 
@@ -315,7 +362,6 @@
         </LinearLayout>
 
     </FrameLayout>
-
 
 
 </LinearLayout>

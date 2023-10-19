@@ -16,6 +16,7 @@ object changeButtonUI {
         binding.content.visibility = View.VISIBLE
         binding.detailsView.visibility = View.INVISIBLE
     }
+
     fun details(binding: ActivityMainBinding) {
         binding.homeIcon.setBackgroundResource(R.drawable.home_icon)
         binding.homeText.setTextColor(ColorStateList.valueOf(Color.GRAY))
