@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".view.activity.MainActivity">
 
@@ -43,16 +44,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:weightSum="1"
-            android:backgroundTint="#CFCFCF"
+
             android:orientation="vertical">
 
             <LinearLayout
+                android:backgroundTint="#CFCFCF"
                 android:orientation="vertical"
                 android:layout_weight="0.9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
+                    app:cardElevation="5sp"
+                    app:cardCornerRadius="8sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18sp"
@@ -83,6 +87,7 @@
                             android:textColor="@color/black"/>
 
                         <TextView
+                            android:id="@+id/amount"
                             android:textSize="12sp"
                             android:fontFamily="@font/inter"
                             android:layout_width="wrap_content"
@@ -94,134 +99,152 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:lineHeight="26.25sp"
-                    android:textStyle="bold"
-                    android:textSize="22sp"
-                    android:layout_marginStart="13sp"
-                    android:layout_marginEnd="13sp"
+                <LinearLayout
+                    android:id="@+id/content"
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="People also own"/>
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_marginTop="12sp"
-                    android:textSize="13sp"
-                    android:layout_marginStart="13sp"
-                    android:layout_marginEnd="13sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="This list is based on the portfolio of people on StockX who own ACI."/>
-
-                <GridLayout
-                    android:orientation="horizontal"
-                    android:layout_margin="12sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:rowCount="1"
-                    android:columnCount="2">
-
-                    <androidx.cardview.widget.CardView
-                        android:background="@drawable/cardbackground"
-                        android:layout_columnWeight="0.5"
-                        android:layout_width="0dp"
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="13sp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="18sp"
-                        android:layout_marginBottom="15sp"
-                        android:layout_marginStart="12sp"
-                        android:layout_marginEnd="12sp">
+                        android:textColor="@color/black"
+                        android:text="People also own"/>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_margin="15sp">
-
-                            <TextView
-                                android:textStyle="bold"
-                                android:textSize="18sp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="GP.PB"
-                                android:fontFamily="@font/inter"
-                                android:textColor="#090909"/>
-
-                            <TextView
-                                android:layout_marginTop="25sp"
-                                android:textSize="13sp"
-                                android:fontFamily="@font/inter"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="GP.PB ৳ 100.00"
-                                android:textColor="@color/black"/>
-
-                            <TextView
-                                android:textSize="22sp"
-                                android:textStyle="bold"
-                                android:fontFamily="@font/inter"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="+9.40%"
-                                android:textColor="#00C806"/>
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_columnWeight="0.5"
-                        android:layout_width="0dp"
+                    <TextView
+                        android:layout_marginTop="12sp"
+                        android:textSize="13sp"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="13sp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="18sp"
-                        android:layout_marginBottom="15sp"
-                        android:layout_marginStart="12sp"
-                        android:layout_marginEnd="12sp">
+                        android:textColor="@color/black"
+                        android:text="This list is based on the portfolio of people on StockX who own ACI."/>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                    <GridLayout
+                        android:orientation="horizontal"
+                        android:layout_margin="12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:rowCount="1"
+                        android:columnCount="2">
+
+                        <androidx.cardview.widget.CardView
+                            app:cardElevation="10sp"
+                            app:cardCornerRadius="10sp"
+                            android:layout_columnWeight="0.5"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_margin="15sp">
+                            android:layout_marginTop="18sp"
+                            android:layout_marginBottom="15sp"
+                            android:layout_marginStart="12sp"
+                            android:layout_marginEnd="12sp">
 
-                            <TextView
-                                android:textStyle="bold"
-                                android:textSize="18sp"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="GP.PB"
-                                android:fontFamily="@font/inter"
-                                android:textColor="#090909"/>
+                                android:orientation="vertical"
+                                android:layout_margin="15sp">
 
-                            <TextView
-                                android:layout_marginTop="25sp"
-                                android:textSize="13sp"
-                                android:fontFamily="@font/inter"
-                                android:layout_width="wrap_content"
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="GP.PB"
+                                    android:fontFamily="@font/inter"
+                                    android:textColor="#090909"/>
+
+                                <TextView
+                                    android:id="@+id/amount_2"
+                                    android:layout_marginTop="25sp"
+                                    android:textSize="13sp"
+                                    android:fontFamily="@font/inter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="GP.PB ৳ 100.00"
+                                    android:textColor="@color/black"/>
+
+                                <TextView
+                                    android:id="@+id/percent"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/inter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+9.40%"
+                                    android:textColor="#00C806"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            app:cardElevation="10sp"
+                            app:cardCornerRadius="10sp"
+                            android:layout_columnWeight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginBottom="15sp"
+                            android:layout_marginStart="12sp"
+                            android:layout_marginEnd="12sp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="GP.PB ৳ 100.00"
-                                android:textColor="@color/black"/>
+                                android:orientation="vertical"
+                                android:layout_margin="15sp">
 
-                            <TextView
-                                android:textSize="22sp"
-                                android:textStyle="bold"
-                                android:fontFamily="@font/inter"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="+9.40%"
-                                android:textColor="#00C806"/>
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="GP.PB"
+                                    android:fontFamily="@font/inter"
+                                    android:textColor="#090909"/>
 
-                        </LinearLayout>
+                                <TextView
+                                    android:id="@+id/amount_3"
+                                    android:layout_marginTop="25sp"
+                                    android:textSize="13sp"
+                                    android:fontFamily="@font/inter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="GP.PB ৳ 100.00"
+                                    android:textColor="@color/black"/>
 
-                    </androidx.cardview.widget.CardView>
+                                <TextView
+                                    android:id="@+id/percent_2"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/inter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+9.40%"
+                                    android:textColor="#00C806"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
 
 
-                </GridLayout>
+                    </GridLayout>
+
+                </LinearLayout>
+
+
 
             </LinearLayout>
 
             <LinearLayout
+                android:elevation="5sp"
+                android:background="@color/white"
                 android:layout_weight="0.1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -234,6 +257,7 @@
                     android:layout_height="wrap_content">
 
                     <LinearLayout
+                        android:id="@+id/homeBtn"
                         android:layout_gravity="center"
                         android:orientation="vertical"
                         android:gravity="center"
@@ -259,6 +283,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/detailsBtn"
                         android:layout_gravity="center"
                         android:orientation="vertical"
                         android:gravity="center"

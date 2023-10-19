@@ -1,9 +1,10 @@
 package com.akash.livetesttvl.view.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.akash.livetesttvl.R
+import androidx.appcompat.app.AppCompatActivity
 import com.akash.livetesttvl.databinding.ActivityMainBinding
+import com.akash.livetesttvl.utils.changeButtonUI
+import com.akash.livetesttvl.utils.changePercentage
 
 class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
@@ -12,10 +13,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
 
-        changePercentage()
-    }
+        binding!!.homeBtn.setOnClickListener {
+            changeButtonUI.home(binding!!)
+        }
 
-    private fun changePercentage() {
-        
+        binding!!.detailsBtn.setOnClickListener {
+            changeButtonUI.details(binding!!)
+        }
+
+        changePercentage(binding!!)
     }
 }
