@@ -60,6 +60,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        mHandler.removeCallbacks(mRunnable) // Remove callbacks when the activity is destroyed
+        mHandler.removeCallbacks(mRunnable)
     }
 }
