@@ -6,9 +6,9 @@ Live Coding Test for Android Developer from Techetron Ventures Ltd. (TVL)
 - IDE Used: Android Studio
 - Emulator Used: Google Pixel 7 Pro
 
-- DOWNLOAD THE APP BY CLICKING [HERE](https://github.com/SabirKhanAkash/MovieDB/raw/master/MovieDB-App.apk)
+- DOWNLOAD THE APP BY CLICKING [HERE](https://github.com/SabirKhanAkash/tvl-live-coding-test/raw/main/TVL-Live-Coding-Test-App.apk)
 
-- For any bugs reporting, Create issues [here](https://github.com/SabirKhanAkash/MovieDB/issues) 
+- For any bugs reporting, Create issues [here](https://github.com/SabirKhanAkash/tvl-live-coding-test/issues) 
 Any type of suggestons is highly appreciated.
 
 # HAPPY CODING !
